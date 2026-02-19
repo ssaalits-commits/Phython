@@ -9,7 +9,7 @@ import csv
 
 
 
-faili_nimi= 'Phython it25/eesti_korka_mängud.csv'
+faili_nimi= 'eesti_korka_mängud.csv'
 
 meeskonnad = []
 
