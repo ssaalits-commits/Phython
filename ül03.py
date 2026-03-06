@@ -117,13 +117,99 @@
 
 # 4.2 Banner
 
-def mahlapakkide_arv(a):
-    mp = a * (0.4/3)
-    return mp
-
-print(mahlapakkide_arv(50))
-
-
-
+# def mahlapakkide_arv(a):
+#     mp = a * (0.4/3)
+#     return mp
+# 
+# print(mahlapakkide_arv(50))
+# 
 
 
+#4.3
+
+# def eelarve(kylaliste_arv):
+#     return kylaliste_arv * 10 + 55
+# 
+# 
+# 
+# kutsutud = int(input("Mitu inimest on kutsutud? "))
+# tulevad = int(input("Mitu inimest tuleb? "))
+# 
+# 
+# maksimaalne = eelarve(kutsutud)
+# minimaalne = eelarve(tulevad)
+# 
+# 
+# print("Maksimaalne eelarve:", maksimaalne, "eurot")
+# print("Minimaalne eelarve:", minimaalne, "eurot")
+
+
+
+
+
+#4.4 Tervitused mõtisklusega
+
+# def tervitus(n):
+#     print('Võõrustaja: "Tere!"')
+#     print("Täna", n, "kord tervitada, mõtiskleb võõrustaja.")
+#     print('Külaline: "Tere, suur tänu kutse eest!"')
+# 
+# 
+# kylaliste_arv = int(input("Mitu külalist tuleb? "))
+# 
+# for i in range(1, kylaliste_arv + 1):
+#     tervitus(i)
+
+
+
+#4.5 Mündid
+
+# def pronksikarva_summa(järjend):
+#     summa = 0
+#     for arv in järjend:
+#         if arv in [1, 2, 5]:
+#             summa += arv
+#     return summa
+# 
+# 
+# 
+# fail = open("mündid.txt", encoding="UTF-8")
+# read = fail.readlines()
+# fail.close()
+# 
+# mündid = []
+# 
+# for rida in read:
+#     rida = rida.strip()
+#     if rida: 
+#         mündid.append(int(rida))
+# 
+# tulemus = pronksikarva_summa(mündid)
+# 
+# print("Hoiupõrsasse läheb", tulemus, "senti.")
+
+
+
+# 4.6 Kuupäev
+
+
+
+def kuu_nimi(kuu):
+    kuud = [
+        "jaanuar", "veebruar", "märts", "aprill",
+        "mai", "juuni", "juuli", "august",
+        "september", "oktoober", "november", "detsember"
+    ]
+    return kuud[kuu - 1]
+
+
+
+def kuupäev_sõnana(kuupäev):
+    päev, kuu, aasta = kuupäev.split(".")
+    kuu = int(kuu)
+    return f"{int(päev)}. {kuu_nimi(kuu)} {aasta}. a"
+
+
+
+sisend = input("Sisesta kuupäev kujul DD.MM.YYYY: ")
+print(kuupäev_sõnana(sisend))
