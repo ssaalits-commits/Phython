@@ -1,0 +1,1 @@
+img = file.open("img/yl_pildid.jpg")
