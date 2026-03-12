@@ -18,9 +18,7 @@ import csv
 
 rentid_arv = 0
 faili_nimi= 'rentals.csv'
-with open(faili_nimi, mode='r', encoding='utf-8') as fail:
-    csv_lugeja = csv.reader(fail)
-
+with open(faili_nimi):
 
 
 
